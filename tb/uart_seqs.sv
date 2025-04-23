@@ -691,9 +691,9 @@ start_item(req);
 		$display("\n\n\n\n THIS IS FD1 STEP 4 \n\n\n\n");
 
 //step 5		
-		//IER - making ier[1] == 1	
+		//IER -  making ier[2] == 1 and ier[0] == 1	 ier == 5
 		start_item(req);
-		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0100;});
+		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0101;}); ///ier == 5 2nd bit and 0th bit high
 		finish_item(req);
 		$display("\n\n\n\n THIS IS FD1 STEP 5 \n\n\n\n");
 
@@ -794,19 +794,19 @@ class framing2 extends uart_seqs;
 		$display("\n\n\n\n THIS IS STEP 4 \n\n\n\n");
 
 //step 5		
-		//IER - making ier[1] == 1
-		start_item(req);
-		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0001;});
-		finish_item(req);
-		$display("\n\n\n\n THIS IS STEP 5 \n\n\n\n");
-
-//step 6		
 		//clearing fifo registers
 		start_item(req);
 		assert(req.randomize() with {wb_adr_i == 2; wb_we_i == 1; wb_data_i == 8'b0000_0110;});
 		finish_item(req);
-		$display("\n\n\n\n THIS IS STEP 6 \n\n\n\n");
+		$display("\n\n\n\n THIS IS STEP 5 \n\n\n\n");
+		
 
+//step 6		
+		//IER - making ier[2] == 1 and ier[0] == 1  its ier == 5
+		start_item(req);
+		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0101;});
+		finish_item(req);
+		$display("\n\n\n\n THIS IS STEP 6 \n\n\n\n");
 //step 7
 		//thr (passing actual value)
 		start_item(req);
