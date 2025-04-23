@@ -15,7 +15,7 @@ This project implements **Universal Asynchronous Receiver Transmitter (UART) ver
 6. **LSR (Line Status Register)**: Indicates the status of UART operations, including errors like overrun or framing issues.
 7. **MCR (Modem Control Register)**: Controls modem lines like DTR and RTS.
 8. **MSR (Modem Status Register)**: Provides the status of the modem lines.
-9. **SCR (Scratch Register)**: A general-purpose register for temporary data.
+
 
 ### Working of UART Protocol:
 1. **Data Transmission**: Data is loaded into the **THR** for transmission. It is then serialized and sent out.
