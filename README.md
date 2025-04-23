@@ -64,7 +64,6 @@ Ensure you have the following tools installed:
 1. **Clone the Repository**:
    ```sh
    git clone <repo-link>
-   cd uart_uvm_verification
    ```
 2. **Compile the UVM Testbench**:
    ```sh
