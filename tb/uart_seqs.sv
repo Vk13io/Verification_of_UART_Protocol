@@ -1071,7 +1071,7 @@ class break_int_seq1 extends uart_seqs;
 //step 6		
 		//IER - making ier[2] == 1	
 		start_item(req);
-		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0100;});
+		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0101;});
 		finish_item(req);
 
 //step 7
@@ -1148,7 +1148,7 @@ class break_int_seq2 extends uart_seqs;
 //step 6		
 		//IER - making ier[2] == 1	
 		start_item(req);
-		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0100;});
+		assert(req.randomize() with {wb_adr_i == 1; wb_we_i == 1; wb_data_i == 8'b0000_0101;});
 		finish_item(req);
 
 //step 7
